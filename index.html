@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dashboard">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hostipal Dashboard</title>
+
+    <!-- css link framwork -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/chart.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+
+    <script type="text/javascript" src="assets/js/fontawesome-solid.js"></script>
+    <script type="text/javascript" src="assets/js/fontawesome-all.js"></script>
+</head>
+
+<body ng-controller="Hdashboard">
+    
+    <!-- wrapper -->
+    <div class="wrapper">
+
+        <!-- sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 class="center"> Hostipal Dashboard </h3>
+                <strong>HD</strong>
+            </div>
+
+            <ul class="list-unstlyed components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle">
+                        <i class="fas fas fa-align-left right-5px"></i>
+                        <p>Home</p>
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li><a href="#"> Home 1</a></li>
+                        <li><a href="#"> Home 2</a></li>
+                        <li><a href="#"> Home 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-briefcase right-5px"></i>
+                        <p>About</p>
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy right-5px"></i>
+                        <p>Page</p>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li><a href="#"> Page 1</a></li>
+                        <li><a href="#"> Page 2</a></li>
+                        <li><a href="#"> Page 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- page content -->
+        <div id="content">
+            <!-- navbar content -->
+            <nav class="navbar navbar-expand-lg navbar-light bglight">
+                <div class="container-fluid">
+                    <!-- button for sidebar  -->
+                    <button type="button" id="sidebarCollapse" class="btn btn-success">
+                        <i class="fas fa-align-left"></i>
+                        <!-- <span></span> -->
+                    </button>
+
+                    <div class="nav">
+                        <ul class="nav">
+                            <li>
+                                <!-- <div class="btn-group"> -->
+                                    <a href="" class="user-btn btn btn-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <!-- <img src="assets/img/user-icon.png" alt="Icon User"> -->
+                                        <b><i class="far fa-user"></i></b>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <button class="dropdown-item" type="button">Logout</button>
+                                    </div>
+                                <!-- </div> -->
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- button responsive for navbar right -->
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-haspopup="true"  aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button><br>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Pelayanan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">karyawan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Rumah Sakit</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- <a class="nav-link" href="#"></a> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>  
+
+            <!-- start content -->
+            <!-- <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    <i class="fas fa-users icon-lg"></i>
+                                </div>
+                                <div class="col-sm-4">Users</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    <i class="fas fa-users icon-lg"></i>
+                                </div>
+                                <div class="col-sm-4">Users</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    <i class="fas fa-users icon-lg"></i>
+                                </div>
+                                <div class="col-sm-4">Users</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    <i class="fas fa-users icon-lg"></i>
+                                </div>
+                                <div class="col-sm-4">Users</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="container-fluid margin-top-20px">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                Tabel
+                            </div>
+                            <div class="card-body">
+
+                                <form action="" method="post">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Search</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="Seacrh" ng-model="searchTable">
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">No Telp</th>
+                                            <th scope="col">Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="datas in (result = (data | filter : searchTable))">
+                                            <th scope="row" class="text-center">{{ datas.no }}</th>
+                                            <td>{{ datas.nama }}</td>
+                                            <td>{{ datas.email }}</td>
+                                            <td>{{ datas.notelp }}</td>
+                                            <td class="text-center">
+                                                <div class="row">
+                                                    <!-- veiw -->
+                                                    <div class="col-sm-3">
+                                                        <a href="" class="aksi-table">
+                                                            <i class="fas fa-eye" style="margin-right:auto;margin-left:auto;color:#637dd3;"></i>
+                                                        </a>
+                                                    </div>
+                                                    <!-- update -->
+                                                    <div class="col-sm-3">
+                                                        <a href="" class="aksi-table">
+                                                            <i class="fas fa-pencil-alt" style="margin-right:auto;margin-left:auto;color:#28a547;"></i>
+                                                        </a>
+                                                    </div>
+                                                    <!-- delete -->
+                                                    <div class="col-sm-3">
+                                                        <a href="" class="aksi-table">
+                                                            <i class="fas fa-trash" style="margin-right:auto;margin-left:auto;color:#af3535;"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr ng-if="result.length == 0">
+                                            <td colspan="5" class="bg-danger text-white text-center" style="padding:10px 0;">
+                                                Data Tidak Ditemukan
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                            </table>
+
+                            <!-- Pagination -->
+                                <nav aria-label="">
+                                    <ul class="pagination right">
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                        </li>   
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active" aria-current="page">
+                                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                Kalender
+                            </div>
+                            <div class="card-body">
+                                <!-- <form action="" method="post">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Cek</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" placeholder="Cek" ng-model="searchTable">
+                                        </div>
+                                    </div>
+                                </form> -->
+                                <div class="tanggal"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                 
+
+            </div><!-- container end -->
+
+            <div class="container-fluid margin-top-20px">
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                Header
+                            </div>
+                            <div class="card-body">
+                                <canvas id="myChart" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                Header
+                            </div>
+                            <div class="card-body">
+                                <canvas id="myCharts" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                Header
+                            </div>
+                            <div class="card-body">
+                                <canvas id="myChartss" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            
+    </div><!-- content end -->
+
+    <!-- script js link library-->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/angularjs.js"></script>
+    <script type="text/javascript" src="assets/js/angular-route.js"></script>
+    <script type="text/javascript" src="assets/js/chart.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+
+    <script>
+        
+        $(document).ready(function(){
+            $('#sidebarCollapse').on('click', function(){
+                $('#sidebar').toggleClass('active');
+            });
+            $('.tanggal').datepicker();            
+        });
+    </script>
+</body>
+</html>
